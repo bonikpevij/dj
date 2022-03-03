@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>main</title>
+</head>
+    <body>
+        {% extends "base.html" %}
+        <!--{% load static %}-->
+        {% block content %}
+        <input id="search-here" class=" form-control" placeholder="type here to search" >
+        <div id="box">
+                {% for item in object_list %}
+                <b>{{item}}<b> <br>
+        </div>
+                {% endfor%}
+            {% endblock %}
+        {% block scripts %}
+        <script src="{% static 'js/search.js' %}"></script>
+        {% endblock scripts %}
+
+    </body>
+</html>
